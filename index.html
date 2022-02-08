@@ -460,7 +460,7 @@ function about() {
            }
            else {
             // attackdiv_slatlong = slatlong[dst]["country"];
-            attackdiv_slatlong = "usa";
+            attackdiv_slatlong = "US";
            }
 
            // Specify attack color
@@ -471,7 +471,7 @@ function about() {
              strokeColor = 'red';
            }
            else {
-             if (getStroke() < 70) {
+             if (getStroke() < 50) {
                strokeColor = 'green';
              }
              else {
@@ -501,7 +501,7 @@ function about() {
 
            // update the scrolling attack div
            $('#attackdiv').append(srccountry + " (" + randomIP() + ") " +
-                                  " <span style='color:red'>attacks</span> " +
+                                  " <span style='color:red'>--></span> " +
                                   attackdiv_slatlong+  " (" + randomIP() + ") " +
                                   " <span style='color:steelblue'>(" + which_attack + ")</span> " +
                                   "<br/>");
