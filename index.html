@@ -152,10 +152,7 @@ function about() {
     attack_max = 2000 ;
 
     // add/change the attack types here
-    attack_type = [ "any port scan in a storm", "ssh brutish force", "Thought Leader Tweet",
-                    "SYN FLOOD BA-BY", "Spotty", "Heartbleed Hotel", "Po_ODLE", "Sharknado",
-                    "CORGI Attack", "Ping of DOOM", "Conficker", "Goldfinger", "SANDPAPER",
-                    "SNAILshock", "Spaghetti RAT", "Driduplex" ] ;
+    appType = [ "ssl","ping","grpc","oracle","web-browsing","netbios-ns","nice","soap","http-proxy","vmware","msrpc-base" ] ;
 
     // gotta add types here if you add more sounds (or delete them)
 
@@ -225,7 +222,7 @@ function about() {
       attack_max=200;
     }
 
-    if (typeof org_name !== 'undefined') { $("#titlediv").text(decodeURI(org_name) + " Cyber Attack Map (Demo)").html() }
+    if (typeof org_name !== 'undefined') { $("#titlediv").text(decodeURI(org_name) + " Cyber Attack Map - Demo").html() }
 
     // we maintain a fixed queue of "attacks" via this class
     function FixedQueue( size, initialValues ){
@@ -392,7 +389,7 @@ function about() {
            var srclong = slatlong[src].long;
            var dstlat = slatlong[dst].lat;
            var dstlong = slatlong[dst].long;
-           which_attack = attack_type[Math.floor((Math.random() * attack_type.length))];
+           which_attack = appType[Math.floor((Math.random() * appType.length))];
            var srccountry = slatlong[src]["country"];
            // "Hi, Mandiant!!"
            if (typeof china_mode !== 'undefined') {
@@ -462,7 +459,8 @@ function about() {
              dstlong = centers[center_id].LONG;
            }
            else {
-            attackdiv_slatlong = slatlong[dst]["country"];
+            // attackdiv_slatlong = slatlong[dst]["country"];
+            attackdiv_slatlong = "usa";
            }
 
            // Specify attack color
