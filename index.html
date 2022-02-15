@@ -137,7 +137,7 @@ function about() {
   <audio id="timallen" src="timallen.wav" preload="auto"></audio>
 
   <center><div id="container1"></div></center>
-  <div id="titlediv">AA Cyber Attack Map - Demo</div>
+  <div id="titlediv">AA Cyber Attack Map</div>
   <div id="attackdiv"></div>
   <div id="aboutdiv"><i class="fa fa-question-circle fa-2x" onClick="about();"></i></div>
 
@@ -151,7 +151,7 @@ function about() {
   <div id="about">
   <h3>About Cyber Attack Map</h3>
   This attack map is purely for display purpose. It neither reflects any active or past security threats to the company's
-  assets, nor it displays maps with real data. Use this for demo purpose only.<br><br>Credit goes to the creators of the original
+  assets, nor it displays maps with real-time data. Use this for demo purpose only.<br><br>Credit goes to the creators of the original
   <a href="https://github.com/bengadbois/pewpew">pewpew threat map</a>.
   </div>
 
@@ -237,7 +237,7 @@ function about() {
       attack_max=200;
     }
 
-    if (typeof org_name !== 'undefined') { $("#titlediv").text(decodeURI(org_name) + " Cyber Attack Map - Demo").html() }
+    if (typeof org_name !== 'undefined') { $("#titlediv").text(decodeURI(org_name) + " Cyber Attack Map").html() }
 
     // we maintain a fixed queue of "attacks" via this class
     function FixedQueue( size, initialValues ){
